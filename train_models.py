@@ -35,6 +35,16 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.20, random_state=42, stratify=y
 )
 
+# Export the held-out test dataset for Streamlit evaluation
+test_data = X_test.copy()
+test_data["diagnosis"] = y_test.values
+
+test_data.to_csv(
+    ROOT / "test_data.csv",
+    index=False
+)
+
+print("Test dataset exported successfully.")
 models = {
     "Logistic Regression": Pipeline([
         ("scaler", StandardScaler()),
