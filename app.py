@@ -13,7 +13,7 @@ MODEL_DIR = ROOT / "model"
 MODEL_FILES = {
     "Logistic Regression": "logistic_regression.joblib",
     "Decision Tree": "decision_tree.joblib",
-    "K-Nearest Neighbors": "knearest_neighbors.joblib",
+    "K-Nearest Neighbors": "k_nearest_neighbors.joblib",
     "Gaussian Naive Bayes": "gaussian_naive_bayes.joblib",
     "Support Vector Machine": "support_vector_machine.joblib",
 }
